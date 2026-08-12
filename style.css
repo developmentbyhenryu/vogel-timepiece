@@ -1,0 +1,1194 @@
+/* =========================================
+   VOGEL TIMEPIECE
+   Global Styles
+========================================= */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+    --charcoal: #171717;
+    --dark-brown: #2d241e;
+    --gold: #b08d57;
+    --gold-light: #c9aa76;
+    --ivory: #f4f0e6;
+    --white: #ffffff;
+    --gray: #77736d;
+    --light-gray: #ded9ce;
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--ivory);
+    color: var(--charcoal);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+h1 {
+    font-size: clamp(3rem, 8vw, 6.5rem);
+}
+
+h2 {
+    font-size: clamp(2.3rem, 5vw, 4.5rem);
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    margin-bottom: 1.25rem;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.site-header {
+    background-color: var(--charcoal);
+    color: var(--white);
+}
+
+.navbar {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+    min-height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 2rem;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    letter-spacing: 0.12em;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+}
+
+.nav-links a {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--gold-light);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 85vh;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(23, 23, 23, 0.95) 0%,
+            rgba(23, 23, 23, 0.75) 45%,
+            rgba(23, 23, 23, 0.25) 100%
+        ),
+        url('https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=2000&q=85');
+
+    background-size: cover;
+    background-position: center;
+
+    color: var(--white);
+}
+
+.hero-content {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+    max-width: 850px;
+}
+
+.hero h1 {
+    margin-bottom: 1.5rem;
+}
+
+.hero h1 span {
+    color: var(--gold-light);
+}
+
+.hero-text {
+    max-width: 600px;
+    font-size: 1.1rem;
+    color: #e4e1da;
+    margin-bottom: 2rem;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.9rem 1.5rem;
+
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--gold);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--gold-light);
+}
+
+.btn-secondary {
+    border: 1px solid var(--gold);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--gold);
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+.section {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+    padding: 7rem 0;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin-bottom: 3rem;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.intro-content {
+    font-size: 1.05rem;
+    color: var(--gray);
+}
+
+.intro-content p + p {
+    margin-top: 1.5rem;
+}
+
+
+/* =========================================
+   SERVICES
+========================================= */
+
+.services-preview {
+    background-color: var(--charcoal);
+    color: var(--white);
+
+    width: 100%;
+    max-width: none;
+
+    padding-left: max(5%, calc((100% - 1200px) / 2));
+    padding-right: max(5%, calc((100% - 1200px) / 2));
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.service-card {
+    padding: 2.5rem;
+    border: 1px solid #393939;
+
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+}
+
+.service-number {
+    display: block;
+    color: var(--gold);
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 2rem;
+}
+
+.service-card h3 {
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: #aaa59c;
+}
+
+.center-button {
+    margin-top: 3rem;
+}
+
+.text-link {
+    display: inline-block;
+
+    color: var(--gold);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    transition: color 0.3s ease;
+}
+
+.text-link:hover {
+    color: var(--gold-light);
+}
+
+
+/* =========================================
+   GUSTAV
+========================================= */
+
+.gustav-preview {
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(244, 240, 230, 0.98) 0%,
+            rgba(244, 240, 230, 0.9) 50%,
+            rgba(244, 240, 230, 0.35) 100%
+        ),
+        url('https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=1800&q=85');
+
+    background-size: cover;
+    background-position: center;
+}
+
+.gustav-content {
+    max-width: 600px;
+}
+
+.gustav-content p:not(.eyebrow) {
+    color: var(--gray);
+    margin: 1.5rem 0 2rem;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.cta {
+    text-align: center;
+    max-width: none;
+    background-color: var(--dark-brown);
+    color: var(--white);
+}
+
+.cta h2 {
+    margin-bottom: 1rem;
+}
+
+.cta p:not(.eyebrow) {
+    color: #c8c2b9;
+    margin-bottom: 2rem;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    background-color: var(--charcoal);
+    color: var(--white);
+    padding: 4rem 5% 2rem;
+}
+
+.footer-content {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #383838;
+}
+
+.footer-content h3 {
+    font-size: 1.2rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+}
+
+.footer-content p {
+    color: #aaa59c;
+    font-size: 0.9rem;
+}
+
+.copyright {
+    width: min(1200px, 100%);
+    margin: 2rem auto 0;
+
+    color: #77736d;
+    font-size: 0.75rem;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        padding: 1.5rem 0;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .hero {
+        min-height: 75vh;
+    }
+
+    .intro {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gustav-preview {
+        min-height: 450px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 5rem 0;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+/* =========================================
+   ABOUT GUSTAV PAGE
+========================================= */
+
+.page-hero {
+    min-height: 55vh;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(23, 23, 23, 0.95) 0%,
+            rgba(23, 23, 23, 0.75) 55%,
+            rgba(23, 23, 23, 0.35) 100%
+        ),
+        url('https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=2000&q=85');
+
+    background-size: cover;
+    background-position: center;
+
+    color: var(--white);
+}
+
+.page-hero-content {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.page-hero h1 {
+    margin-bottom: 1.5rem;
+}
+
+.page-hero h1 span {
+    color: var(--gold-light);
+}
+
+.page-hero p:not(.eyebrow) {
+    max-width: 600px;
+    color: #ddd8ce;
+    font-size: 1.1rem;
+}
+
+
+/* =========================================
+   BIOGRAPHY
+========================================= */
+
+.biography {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 5rem;
+    align-items: start;
+}
+
+.biography-content {
+    color: var(--gray);
+    font-size: 1.05rem;
+}
+
+.biography-content p + p {
+    margin-top: 1.5rem;
+}
+
+
+/* =========================================
+   PERSONA
+========================================= */
+
+.persona-section {
+    background-color: var(--charcoal);
+    color: var(--white);
+
+    width: 100%;
+}
+
+.persona-section .section {
+    max-width: 1200px;
+}
+
+.persona-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.persona-card {
+    min-height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 1.75rem;
+
+    border: 1px solid #3b3b3b;
+}
+
+.persona-card span {
+    color: var(--gold);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+}
+
+.persona-card strong {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   PHILOSOPHY
+========================================= */
+
+.philosophy {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.philosophy-content {
+    max-width: 800px;
+}
+
+.philosophy-content h2 {
+    margin-bottom: 2rem;
+}
+
+.philosophy-content p:not(.eyebrow) {
+    color: var(--gray);
+    font-size: 1.05rem;
+}
+
+
+/* =========================================
+   ABOUT RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .biography {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .persona-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .page-hero {
+        min-height: 60vh;
+    }
+
+    .page-hero h1 {
+        font-size: 3rem;
+    }
+
+    .persona-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================================
+   SERVICES PAGE
+========================================= */
+
+.services-hero {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(23, 23, 23, 0.95) 0%,
+            rgba(23, 23, 23, 0.72) 55%,
+            rgba(23, 23, 23, 0.3) 100%
+        ),
+        url('https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=2000&q=85');
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* =========================================
+   SERVICES INTRO
+========================================= */
+
+.services-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.services-intro-text {
+    color: var(--gray);
+    font-size: 1.05rem;
+}
+
+
+/* =========================================
+   SERVICE LIST
+========================================= */
+
+.service-list {
+    background-color: var(--charcoal);
+    color: var(--white);
+}
+
+.service-detail {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 3rem;
+
+    padding: 4rem 0;
+
+    border-bottom: 1px solid #383838;
+}
+
+.service-detail:last-child {
+    border-bottom: none;
+}
+
+.service-detail-number {
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+}
+
+.service-detail h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    margin-bottom: 1.25rem;
+}
+
+.service-detail p:not(.eyebrow) {
+    max-width: 650px;
+    color: #aaa59c;
+    font-size: 1rem;
+}
+
+
+/* =========================================
+   PROCESS
+========================================= */
+
+.process {
+    background-color: var(--ivory);
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.process-step {
+    padding: 2rem 0;
+}
+
+.process-step span {
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+}
+
+.process-step h3 {
+    margin: 1rem 0;
+}
+
+.process-step p {
+    color: var(--gray);
+}
+
+
+/* =========================================
+   SERVICES RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .services-intro {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .service-detail {
+        grid-template-columns: 60px 1fr;
+        gap: 1.5rem;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================================
+   OUR STORY PAGE
+========================================= */
+
+.story-hero {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(23, 23, 23, 0.95) 0%,
+            rgba(23, 23, 23, 0.72) 55%,
+            rgba(23, 23, 23, 0.3) 100%
+        ),
+        url('https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=2000&q=85');
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* =========================================
+   STORY INTRO
+========================================= */
+
+.story-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.story-text {
+    color: var(--gray);
+    font-size: 1.05rem;
+}
+
+.story-text p + p {
+    margin-top: 1.5rem;
+}
+
+
+/* =========================================
+   HERITAGE
+========================================= */
+
+.heritage-section {
+    min-height: 550px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 5rem 5%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(45, 36, 30, 0.96),
+            rgba(45, 36, 30, 0.7)
+        ),
+        url('https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=2000&q=85');
+
+    background-size: cover;
+    background-position: center;
+
+    color: var(--white);
+}
+
+.heritage-content {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.heritage-content h2 {
+    margin-bottom: 1.5rem;
+}
+
+.heritage-content h2 span {
+    color: var(--gold-light);
+}
+
+.heritage-content p:not(.eyebrow) {
+    color: #d5d0c7;
+    font-size: 1.05rem;
+}
+
+
+/* =========================================
+   STORY CONTENT
+========================================= */
+
+.story-content {
+    display: flex;
+    justify-content: center;
+}
+
+.story-block {
+    max-width: 800px;
+}
+
+.story-block h2 {
+    margin-bottom: 2rem;
+}
+
+.story-block p:not(.eyebrow) {
+    color: var(--gray);
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+}
+
+
+/* =========================================
+   QUOTE
+========================================= */
+
+.quote-section {
+    background-color: var(--charcoal);
+    color: var(--white);
+
+    padding: 8rem 5%;
+    text-align: center;
+}
+
+.quote-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.quote-mark {
+    display: block;
+
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    line-height: 0.5;
+
+    margin-bottom: 2rem;
+}
+
+.quote-content blockquote {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.2;
+}
+
+.quote-content p {
+    margin-top: 2rem;
+    color: var(--gold-light);
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   STORY RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .story-intro {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .heritage-section {
+        min-height: 450px;
+    }
+
+}
+
+/* =========================================
+   WHO WE SERVE PAGE
+========================================= */
+
+.audience-hero {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(23, 23, 23, 0.95) 0%,
+            rgba(23, 23, 23, 0.72) 55%,
+            rgba(23, 23, 23, 0.3) 100%
+        ),
+        url('https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=2000&q=85');
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* =========================================
+   PURPOSE
+========================================= */
+
+.purpose-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.purpose-content {
+    color: var(--gray);
+    font-size: 1.05rem;
+}
+
+.purpose-content p + p {
+    margin-top: 1.5rem;
+}
+
+
+/* =========================================
+   AUDIENCE
+========================================= */
+
+.audience-section {
+    background-color: var(--charcoal);
+    color: var(--white);
+}
+
+.audience-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.audience-card {
+    padding: 2rem;
+    min-height: 300px;
+
+    border: 1px solid #393939;
+}
+
+.audience-number {
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+}
+
+.audience-card h3 {
+    margin: 3rem 0 1rem;
+}
+
+.audience-card p {
+    color: #aaa59c;
+}
+
+
+/* =========================================
+   TYPICAL USER
+========================================= */
+
+.typical-user {
+    display: flex;
+    justify-content: center;
+}
+
+.user-card {
+    max-width: 900px;
+    padding: 4rem;
+
+    background-color: #ebe5d9;
+
+    border-left: 4px solid var(--gold);
+}
+
+.user-label {
+    color: var(--gold);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+}
+
+.user-card h2 {
+    margin-bottom: 1.5rem;
+}
+
+.user-card > p {
+    color: var(--gray);
+    font-size: 1.05rem;
+    max-width: 750px;
+}
+
+.user-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    margin-top: 3rem;
+    padding-top: 2rem;
+
+    border-top: 1px solid #d2cabb;
+}
+
+.user-details span {
+    display: block;
+
+    color: var(--gold);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+
+    margin-bottom: 0.5rem;
+}
+
+.user-details strong {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   SITE SCOPE
+========================================= */
+
+.scope-section {
+    background-color: var(--dark-brown);
+    color: var(--white);
+}
+
+.scope-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+
+    border-top: 1px solid #58483a;
+}
+
+.scope-item {
+    padding: 2.5rem;
+    border-bottom: 1px solid #58483a;
+}
+
+.scope-item:nth-child(odd) {
+    border-right: 1px solid #58483a;
+}
+
+.scope-item span {
+    color: var(--gold-light);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+}
+
+.scope-item p {
+    color: #d0c8bd;
+    margin-top: 1rem;
+    max-width: 500px;
+}
+
+
+/* =========================================
+   AUDIENCE RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .purpose-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .audience-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .user-details {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .audience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .scope-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .scope-item:nth-child(odd) {
+        border-right: none;
+    }
+
+    .user-card {
+        padding: 2rem;
+    }
+
+}
